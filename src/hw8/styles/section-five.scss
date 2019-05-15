@@ -1,0 +1,65 @@
+.section-five {
+    background-image: url('../../assets/images/radieschen_kasterl.jpg');
+    background-position-x: 30%;
+    background-position-y: center;
+    min-height: 600px;
+
+    &__content-wrapper {
+        @include contentWrapper;
+    }
+
+
+
+    &__content {
+        @include content;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .content__title {
+            font-size: 120px;
+            color: white;
+            margin-left: 16%; 
+        }
+    } 
+    
+    &__label {
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        font-family: 'Bariol', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        bottom: 0;
+        right: 20px;
+        transform: translateY(50%) rotate(12deg);
+
+        > .label-title {
+            font-size: 2.111em;
+            font-family: 'Bebas', sans-serif;
+            font-weight: bold;
+        }
+
+        &:before {
+            content: '';
+            background-color: white;
+            width: 23%;
+            height: 5px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:after {
+            content: '';
+            background-color: white;
+            width: 23%;
+            height: 5px;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

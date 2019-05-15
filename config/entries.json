@@ -1,0 +1,8 @@
+{
+  "index": [
+    "./src/index/index.js"
+  ],
+  "hw8": [
+    "./src/hw8/hw8.js"
+  ]
+}

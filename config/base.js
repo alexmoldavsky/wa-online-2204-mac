@@ -1,19 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const entry = require('./entries.json');
 
 const baseConf = () => {
-  const entry = {
-    index: ['./src/index/index.js'],
-    lesson_2: ['./src/lesson_2/lesson_2.js'],
-    lesson_3: ['./src/lesson_3/lesson_3.js'],
-    lesson_4: ['./src/lesson_4/lesson_4.js'],
-    lesson_5: ['./src/lesson_5/lesson_5.js'],
-  };
-
   let plugins = Object.keys(entry).reduce((acc, name) => {
     acc.push(new HtmlWebpackPlugin({
-      chunksSortMode: 'manual',
       title: `${name}`,
       template: `./src/${name}/${name}.html`,
       chunks: [name],
@@ -24,15 +16,13 @@ const baseConf = () => {
   }, []);
 
   plugins = plugins.concat([
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new LiveReloadPlugin()
   ]);
 
   console.log( process.env.NODE_ENV);
@@ -43,6 +33,8 @@ const baseConf = () => {
     output: {
       filename: '[name].js',
     },
+    devtool: 'source-map',
+
     module: {
       rules: [
         {
@@ -60,7 +52,7 @@ const baseConf = () => {
             {
               loader: 'babel-loader',
               options: {
-                presets: ['@babel/preset-env', '@babel/preset-react']
+                presets: ['@babel/preset-env']
               }
             }
           ]

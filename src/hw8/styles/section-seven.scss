@@ -1,0 +1,36 @@
+.section-seven {
+    background-color: #deeaea;
+    min-height: 743px;
+
+    &__content-wrapper {
+        @include contentWrapper;
+    }
+
+
+
+    &__content {
+        @include content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content-left {
+            @include flexWidth(42%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__image {
+                width: 100%;
+            }
+        }
+
+        .content-right {
+            @include flexWidth(56%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    } 
+}

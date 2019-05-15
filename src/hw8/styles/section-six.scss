@@ -1,0 +1,91 @@
+.section-six {
+    min-height: 730px;
+
+    &__content-wrapper {
+        @include contentWrapper;
+    }
+
+    &__content {
+        @include content;
+
+        .divider_lighter {
+            > .divider-line {
+                color: #a8d2c8;
+            }
+        }
+
+        .content-lookup {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &__col {
+                @include flexWidth(49%);
+
+                .col-cell {
+                    width: 100%;
+    
+                    &__title {
+                        position: relative;
+                        font-size: 26px;
+                        font-weight: 700;
+                        border-bottom: 2px solid #deeaea;
+                        margin-bottom: 0.5rem;
+                        padding: 10px 50px 12px 0;
+
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            width: 16px;
+                            height: 2px;
+                            right: 16px;
+                            top: 28px;
+                            background-color: #a8d2c8;
+                        }
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 16px;
+                            height: 2px;
+                            right: 16px;
+                            top: 28px;
+                            background-color: #a8d2c8;
+                            transform: rotate(-90deg);
+                            transform-origin: 50% 50%;
+                            transition: transform .3s ease-in, opacity .3s ease-in;
+                        }
+                    }
+
+                    &__title_active {
+                        &:after {
+                            transform: rotate(0);
+                            opacity: 0;
+                        }
+                    }
+
+                    &__expand {
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        height: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+                        transition: .3s ease-out;
+                    }
+
+                    &__expand_active {
+                        transform: scaleY(1);
+                        height: auto;
+                        visibility: visible;
+                        pointer-events: inherit;
+                                                            
+                    }
+
+                }
+
+
+            }
+        }
+
+    } 
+}

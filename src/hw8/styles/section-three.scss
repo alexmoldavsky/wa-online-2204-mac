@@ -1,0 +1,47 @@
+.section-three {
+    min-height: 762px;
+     
+    &__content-wrapper {
+        @include contentWrapper;
+    }
+
+    &__content {
+        @include flexWidth(80%);
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        @include tablet {
+            @include flexWidth(95%);
+            flex-direction: column;
+        }
+
+        .content-left {
+            
+            @include flexWidth(48%);
+
+            @include tablet {
+                @include flexHeight(30%);
+                width: 100%;
+            }
+
+        }
+
+        .content-right {
+            @include flexWidth(48%);
+
+            &__logo-img {
+                width: 100%;
+            }
+
+            @include tablet {
+                @include flexHeight(68%);
+                width: 100%;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,96 @@
+.section-four {
+    background-color: #e2eded;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 700px;
+    padding-bottom: 0;
+
+    .left-corner {
+        top: -80px;
+        width: 26%;
+        left: 0;
+        position: absolute;
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    &__content {
+        @include flexWidth(80%);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 0 auto;
+
+        .content-logo {
+            @include flexWidth(30%);
+
+            > .content-logo-img {
+                width: 100%;
+            }
+        }
+
+        .content-article {
+            @include flexWidth(60%);
+
+            .divider-light {
+                > .divider-line {
+                    background-color: white;
+                }
+            }
+
+            &__row {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            
+                .row-cell {
+                    @include flexWidth(45%);
+                    position: relative;
+                   
+            
+                    &__number {
+                        font-family: 'Bariol', sans-serif;
+                        font-weight: 700;
+                        color: white;
+                        font-size: 120px;
+                        line-height: 100px;
+                        position: absolute;
+                        left: -24px;
+                        top: -5px;
+                        z-index: 0;
+                    }
+            
+                    &__article {
+                        position: relative;
+                        z-index: 1;
+                        margin-top: 15%;
+            
+                        .article-title {
+                            font-family: 'Bariol', sans-serif;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            &__row-shift {
+                margin-left: 10%;
+            }
+           
+        }
+       
+    }
+}

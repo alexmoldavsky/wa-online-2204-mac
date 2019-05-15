@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 41px;
+    width: 100%;
+    background-color: white;
+
+    &__menu {
+        display: flex;
+        @include flexWidth(70%);
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            @include flexWidth(95%);
+        }
+
+     
+        .menu-item {
+            @include flexWidth(20%);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #15484c;
+                font-weight: bold;
+
+            }
+        }
+    }
+}

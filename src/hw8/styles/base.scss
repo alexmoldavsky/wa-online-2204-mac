@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: 'Bariol', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #15484c; }
+
+body {
+    margin : 0;
+    padding: 0;
+}
+
+
+ul, ol, h1, h2, h3, h4 {
+    margin : 0;
+    padding: 0;
+}
+  
+  h1, h2, h3, h4 {
+    font-family: 'Bebas', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1px; }
+  
+  h1 {
+    font-size: 5rem;
+    line-height: 5rem; }
+  
+  h2 {
+    font-size: 4.125rem; }
+  
+  h3 {
+    font-size: 2.75rem; }
+  
+  h4 {
+    font-size: 2.25rem; }
+  
+  h5 {
+    font-size: 1.2rem; }
+  
+ 
+  a {
+    text-decoration: none; }
+  
+  input, select {
+    background-color: white; }
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
