@@ -2,17 +2,81 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="http://localhost:35729/livereload.js"></script>
-  <title key='title'></title>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="http://localhost:35729/livereload.js"></script>
+	<title key='title'>Home work 10</title>
 </head>
 
 <body>
-  <h1>Hello from lesson_10</h1>
-  <button id="calculatorBtn">Run calculator</button>
+	<button id="calculatorBtn">Run calculator</button>
+	<div class="calc-container">
+		<input type="number" class="calc-input">
+		<div class="calc-controls">
+			<button class="button button-reset">
+				<span>C</span>
+			</button>
+			<button class="button button-operation" value="+">
+				<span>+</span>
+			</button>
+			<button class="button button-operation" value="-">
+				<span>-</span>
+			</button>
+			<button class="button button-operation" value="*">
+				<span>*</span>
+			</button>
+			<button class="button button-operation" value="/">
+				<span>/</span>
+			</button>
+			<button class="button button-result">
+				<span>=</span>
+			</button>
+		</div>
+		<table class="numbers">
+			<tr>
+				<td class="numbers__number">
+					<button class="number-button" value=7>7</button>
+				</td>
+				<td class="numbers__number">
+					<button class="number-button" value=8>8</button>
+				</td>
+				<td class="numbers__number">
+					<button class="number-button" value=9>9</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="numbers__number">
+					<button class="number-button" value=4>4</button>
+				</td>
+				<td class="numbers__number">
+					<button class="number-button" value=5>5</button>
+				</td>
+				<td class="numbers__number">
+					<button class="number-button" value=6>6</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="numbers__number">
+					<button class="number-button" value=1>1</button>
+				</td>
+				<td class="numbers__number">
+					<button class="number-button" value=2>2</button>
+				</td>
+				<td class="numbers__number">
+					<button class="number-button" value=3>3</button>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="numbers__number number-zero">
+					<button class="number-button" value=0>0</button>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
 </body>
 
 </html>
