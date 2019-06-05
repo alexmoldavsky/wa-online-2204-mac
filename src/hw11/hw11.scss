@@ -30,7 +30,7 @@
         &__lamp_red {
             background-color: rgb(245, 225, 225);
 
-            &_active {
+            &.active {
                 background-color: rgb(241, 22, 22); 
             }
 
@@ -39,7 +39,7 @@
         &__lamp_yellow {
             background-color: rgb(243, 241, 223);
           
-            &_active {
+            &.active {
                 background-color: rgb(241, 226, 22); 
             }
         }
@@ -47,7 +47,7 @@
         &__lamp_green {
             background-color: rgb(227, 245, 225);
            
-            &_active {
+            &.active {
                 background-color: rgb(58, 241, 22); 
             }
         }
